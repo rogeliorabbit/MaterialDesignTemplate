@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Beta</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+
+    <!-- Nav -->
+    <string name="nav_home">Beta</string>
+    <string name="nav_routes">Rutas</string>
+    <string name="nav_activities">Actividades</string>
+    <string name="nav_eat">Comer</string>
+    <string name="nav_sleep">Dormir</string>
+    <string name="nav_news">Noticias</string>
+    <string name="nav_about">Acerca de</string>
+    <string name="nav_more">Más</string>
+
+    <!-- Home -->
+    <string name="home_title">Conoce Laviana</string>
+
+    <!-- Get_Routes -->
+    <string name="routes_tab_one">Routes 1</string>
+    <string name="routes_tab_two">Routes 2</string>
+    <string name="routes_tab_three">Routes 3</string>
+    <string name="routes_tab_four">Routes VR</string>
+
+</resources>
