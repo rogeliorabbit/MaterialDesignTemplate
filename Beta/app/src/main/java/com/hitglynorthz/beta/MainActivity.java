@@ -1,5 +1,7 @@
 package com.hitglynorthz.beta;
 
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -15,8 +17,8 @@ import android.view.MenuItem;
 import com.hitglynorthz.fragments.Fragment_Home;
 import com.hitglynorthz.fragments.Fragment_Routes;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    public Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +97,11 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    // load tablayout for fragments
+    public TabLayout getTabLayout() {
+        return (TabLayout) findViewById(R.id.tablayout);
     }
 
 }

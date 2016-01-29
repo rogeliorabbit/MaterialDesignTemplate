@@ -1,9 +1,8 @@
 package com.hitglynorthz.fragments;
 
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,12 +12,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
+import com.hitglynorthz.beta.MainActivity;
 import com.hitglynorthz.beta.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by rogeliorabbit on 14/01/2016.
@@ -37,7 +33,7 @@ public class Fragment_Routes extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_routes, container, false);
 
-        tabLayout = (TabLayout) rootView.findViewById(R.id.routes_tabs);
+        tabLayout = ((MainActivity) getActivity()).getTabLayout();
         viewPager = (ViewPager) rootView.findViewById(R.id.routes_viewpager);
 
         viewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
@@ -90,6 +86,21 @@ public class Fragment_Routes extends Fragment {
             }
             return null;
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(tabLayout != null) {
+            tabLayout.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        tabLayout.removeAllTabs();
+        tabLayout.setVisibility(View.GONE);
     }
 
     @Override
